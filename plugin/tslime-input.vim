@@ -1,6 +1,6 @@
 " tslime-input.vim.     Repeating commands with tslime
 " Maintainer:           S. Walker <s.r.walker101 [at] gmail [dot] com>
-" Version:              0.3.0
+" Version:              0.3.1
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
