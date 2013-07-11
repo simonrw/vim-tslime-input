@@ -22,6 +22,12 @@
 "     SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 " }}}
 
+" Check if the user has tslime installed
+if !exists("g:loaded_tslime")
+    echoerr "Tslime must be installed for this plugin to work"
+    finish
+endif
+
 function! AskForCommand()
 
     if !exists("g:previous_tslime_command")
