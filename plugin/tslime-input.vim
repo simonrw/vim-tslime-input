@@ -28,7 +28,7 @@ if !exists("g:loaded_tslime")
     finish
 endif
 
-function! AskForCommand()
+function! TslimeAskForCommand()
 
     if !exists("g:previous_tslime_command")
         call inputsave()
@@ -42,7 +42,7 @@ function! AskForCommand()
     call Send_to_Tmux(command . "\n")
 endfunction
 
-function! ResetLastCommand()
+function! TslimeResetLastCommand()
 
     if exists("g:previous_tslime_command")
         unlet g:previous_tslime_command

@@ -7,7 +7,7 @@ commands to be run from vim.
 
 Two functions are made available:
 
-### `AskForCommand`
+### `TslimeAskForCommand`
 
 This function prompts for user input the first time it's run, and on subsequent
 runs it repeats the last command. 
@@ -15,7 +15,7 @@ runs it repeats the last command.
 Some simple shell completion is available but only for binaries in the user's
 PATH at the moment.
 
-### `ResetLastCommand`
+### `TslimeResetLastCommand`
 
 This resets the previously last run command if set.
 
@@ -25,6 +25,6 @@ The user is responsible for setting their own keyboard mappings, but an example
 can be
 
 ``` vim
-nmap <leader>a :call AskForCommand()<CR>
-nmap <leader>R :call ResetLastCommand()<CR>
+nmap <leader>a :call TslimeAskForCommand()<CR>
+nmap <leader>R :call TslimeResetLastCommand()<CR>
 ```
