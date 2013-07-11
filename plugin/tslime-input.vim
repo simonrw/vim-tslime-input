@@ -42,6 +42,12 @@ function! TslimeResetLastCommand()
         unlet g:previous_tslime_command
     endif
 
+    call TslimeResetTslimeSettings()
+endfunction
+
+" Broken out in case the user wants to call this function by itself
+function! TslimeResetTslimeSettings()
+
     if exists("g:tslime")
         unlet g:tslime
     endif

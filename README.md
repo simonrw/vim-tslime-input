@@ -5,9 +5,9 @@ commands to be run from vim.
 
 ## Commands
 
-Two functions are made available:
+Three functions are made available:
 
-### `TslimeAskForCommand`
+`TslimeAskForCommand`
 
 This function prompts for user input the first time it's run, and on subsequent
 runs it repeats the last command. 
@@ -15,9 +15,13 @@ runs it repeats the last command.
 Some simple shell completion is available but only for binaries in the user's
 PATH at the moment.
 
-### `TslimeResetLastCommand`
+`TslimeResetLastCommand`
 
-This resets the previously last run command if set.
+This resets the previously last run command if set. This also calls `TslimeResetTslimeSettings`.
+
+`TslimeResetTslimeSettings`
+
+This function resets the internal tslime settings variable, which contains the tmux session/window/pane to use.
 
 ## Key mappings
 

@@ -10,13 +10,15 @@ Allow repeat commands for tslime
 
 FUNCTIONS                                       *tslime-input-functions*
 
-:call TslimeAskForCommand()       If the command has not been run before, prompt
-                            the user for input and run the command through 
-                            |tslime|.  Simple shell completion is available for 
-                            programs on the users PATH, but none apart from 
-                            this. If a command has been run then just repeat 
-                            the previous command.
+:call TslimeAskForCommand()         If the command has not been run before, prompt
+                                    the user for input and run the command through 
+                                    |tslime|.  Simple shell completion is available for                                    programs on the users PATH, but none apart from 
+                                    this. If a command has been run then just repeat 
+                                    the previous command.
 
-:call TslimeResetLastCommand()    Reset the previously run command
+:call TslimeResetLastCommand()      Reset the previously run command
+
+:call TslimeResetTslimeSettings()   Reset the tslime settings for which
+                                    session/window/pane to use
 
  vim:tw=78:et:ft=help:norl:
