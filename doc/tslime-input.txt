@@ -1,0 +1,22 @@
+tslime-input.txt Repeat commands for tslime
+
+Author: Simon Walker <s.r.walker101@googlemail.com>
+Repo:   https://github.com/mindriot101/vim-tslime-input
+License: Same terms as Vim itself (see |license|)
+
+INTRODUCTION                                    *tslime-input*
+
+Allow repeat commands for tslime
+
+FUNCTIONS                                       *tslime-input-functions*
+
+:call AskForCommand()       If the command has not been run before, prompt
+                            the user for input and run the command through 
+                            |tslime|.  Simple shell completion is available for 
+                            programs on the users PATH, but none apart from 
+                            this. If a command has been run then just repeat 
+                            the previous command.
+
+:call ResetLastCommand()    Reset the previously run command
+
+ vim:tw=78:et:ft=help:norl:
