@@ -42,4 +42,8 @@ function! TslimeResetLastCommand()
         unlet g:previous_tslime_command
     endif
 
+    if exists("g:tslime")
+        unlet g:tslime
+    endif
+
 endfunction
