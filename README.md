@@ -23,8 +23,7 @@ Three functions are made available:
 This function prompts for user input the first time it's run, and on subsequent
 runs it repeats the last command. 
 
-Some simple shell completion is available but only for binaries in the user's
-PATH at the moment.
+The command autocompletes any previous commands run.
 
 `TslimeResetLastCommand`
 

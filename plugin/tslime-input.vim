@@ -1,6 +1,6 @@
 " tslime-input.vim.     Repeating commands with tslime
 " Maintainer:           S. Walker <s.r.walker101 [at] gmail [dot] com>
-" Version:              0.4.0
+" Version:              0.5.0
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -22,13 +22,20 @@
 "     SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 " }}}
 
+let g:tslime_input_previous_commands = []
+
+function! TslimePreviousCommands(A,L,P)
+    return g:tslime_input_previous_commands
+endfunction
+
 function! TslimeAskForCommand()
 
     if !exists("g:previous_tslime_command")
         call inputsave()
-        let command = input("Command to run: ", "", "shellcmd")
+        let command = input("Command to run: ", "", "customlist,TslimePreviousCommands")
         call inputrestore()
         let g:previous_tslime_command = command
+        let g:tslime_input_previous_commands = add(g:tslime_input_previous_commands, command)
     else
         let command = g:previous_tslime_command
     endif

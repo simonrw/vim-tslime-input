@@ -12,9 +12,9 @@ FUNCTIONS                                       *tslime-input-functions*
 
 :call TslimeAskForCommand()         If the command has not been run before, prompt
                                     the user for input and run the command through 
-                                    |tslime|.  Simple shell completion is available for                                    programs on the users PATH, but none apart from 
-                                    this. If a command has been run then just repeat 
-                                    the previous command.
+                                    |tslime|.  Completion of previous commands is 
+                                    performed with the tab key. If a command has 
+                                    been run then just repeat the previous command.
 
 :call TslimeResetLastCommand()      Reset the previously run command
 
